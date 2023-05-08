@@ -1,34 +1,29 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sodet\\Documents\\GitHub\\PC-Metrics\\backend\\backend.csproj": {}
+    "C:\\Users\\Sode\\Documents\\GitHub\\PC-Metrics\\backend\\backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sodet\\Documents\\GitHub\\PC-Metrics\\backend\\backend.csproj": {
+    "C:\\Users\\Sode\\Documents\\GitHub\\PC-Metrics\\backend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sodet\\Documents\\GitHub\\PC-Metrics\\backend\\backend.csproj",
+        "projectUniqueName": "C:\\Users\\Sode\\Documents\\GitHub\\PC-Metrics\\backend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "C:\\Users\\sodet\\Documents\\GitHub\\PC-Metrics\\backend\\backend.csproj",
-        "packagesPath": "C:\\Users\\sodet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sodet\\Documents\\GitHub\\PC-Metrics\\backend\\obj\\",
+        "projectPath": "C:\\Users\\Sode\\Documents\\GitHub\\PC-Metrics\\backend\\backend.csproj",
+        "packagesPath": "C:\\Users\\Sode\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sode\\Documents\\GitHub\\PC-Metrics\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Users\\sodet\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Users\\Sode\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\sodet\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Users\\sodet\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Sode\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sode\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\sodet\\AppData\\Roaming\\Cosmos User Kit\\packages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -76,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
