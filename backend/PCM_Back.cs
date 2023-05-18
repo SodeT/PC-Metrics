@@ -6,8 +6,8 @@ using Hardware.Info;
 
 static class PCM_Backend
 {
-    const int DATA_PER_HOUR = 60;
-    const int TIME_BETWEEN_DATA = DATA_PER_HOUR / 3600;
+    const int DATA_PER_HOUR = 600;
+    const int TIME_BETWEEN_DATA = 3600 / DATA_PER_HOUR;
     static readonly IHardwareInfo hardwareInfo = new HardwareInfo();
 
     public static void Main()
@@ -18,7 +18,7 @@ static class PCM_Backend
 
         while (true)
         {
-            if (lastLog.AddSeconds(1) < DateTime.Now)
+            if (lastLog.AddSeconds(TIME_BETWEEN_DATA) < DateTime.Now)
             {
                 hardwareInfo.RefreshMemoryStatus();
                 float memUsage = hardwareInfo.MemoryStatus.AvailablePhysical / (float)hardwareInfo.MemoryStatus.TotalPhysical;

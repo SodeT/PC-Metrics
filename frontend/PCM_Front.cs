@@ -81,7 +81,6 @@ static class PCM_Frontend
 
             Raylib.ClearBackground(bgColor);
 
-
             int blockCount = WIDTH / BLOCK_WIDTH;
             int prevx = 0;
             int prevy = 0;
@@ -101,7 +100,7 @@ static class PCM_Frontend
 
             for (int i = 0; i < btns.Length; i++)
             {
-			    btns[i].Draw();
+                btns[i].Draw();
             }
             Raylib.EndDrawing();
         }
