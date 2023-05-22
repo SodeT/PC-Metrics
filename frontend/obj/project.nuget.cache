@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "oJZruxYM0DWEwfof8g0TNb3QcG3RFxexaa46T412rWB2qrbfZmFpknf5V0PBXEOrg8rZGTO2/iYHD49y60CoBg==",
+  "dgSpecHash": "EsdaWB9Ka4BhmLo6HvXuQBquYv43XuGTH9xiXiPqpESidSj3WI6OggOQtQALRaafimST7E2E0aAUiE3jrZRHGw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sodet\\Documents\\GitHub\\PC-Metrics\\frontend\\PC-Metrics.csproj",
+  "projectFilePath": "/media/sf_archbox_shared/GitHub/PC-Metrics/frontend/PC-Metrics.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\sodet\\.nuget\\packages\\raylib-cs\\4.5.0\\raylib-cs.4.5.0.nupkg.sha512",
-    "C:\\Users\\sodet\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+    "/home/user/.nuget/packages/raylib/4.5.0/raylib.4.5.0.nupkg.sha512",
+    "/home/user/.nuget/packages/raylib-cs/4.5.0/raylib-cs.4.5.0.nupkg.sha512",
+    "/home/user/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/home/user/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.3/microsoft.aspnetcore.app.ref.7.0.3.nupkg.sha512"
   ],
   "logs": []
 }

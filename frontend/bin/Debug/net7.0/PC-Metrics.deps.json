@@ -8,12 +8,14 @@
     ".NETCoreApp,Version=v7.0": {
       "PC-Metrics/1.0.0": {
         "dependencies": {
-          "Raylib-cs": "4.5.0"
+          "Raylib-cs": "4.5.0",
+          "raylib": "4.5.0"
         },
         "runtime": {
           "PC-Metrics.dll": {}
         }
       },
+      "raylib/4.5.0": {},
       "Raylib-cs/4.5.0": {
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -43,12 +45,12 @@
           "runtimes/win-x64/native/raylib.dll": {
             "rid": "win-x64",
             "assetType": "native",
-            "fileVersion": "4.5.0.0"
+            "fileVersion": "0.0.0.0"
           },
           "runtimes/win-x86/native/raylib.dll": {
             "rid": "win-x86",
             "assetType": "native",
-            "fileVersion": "4.5.0.0"
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -60,6 +62,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "raylib/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pRx9hc8KSy9uWrwpYPe47oYNxHsi95NwF9gdJV4xEMbqIJP2MrjDj8CM8k2e8PiU0syQ0FfeIp76h6f8dNxi5A==",
+      "path": "raylib/4.5.0",
+      "hashPath": "raylib.4.5.0.nupkg.sha512"
     },
     "Raylib-cs/4.5.0": {
       "type": "package",

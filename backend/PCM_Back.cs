@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections;
-using System.IO;
-using System.Text;
+﻿using System.Text;
 using Hardware.Info;
 
 static class PCM_Backend
 {
+    const int DATA_PER_WRITE = 10;
     const int DATA_PER_HOUR = 600;
     const int TIME_BETWEEN_DATA = 3600 / DATA_PER_HOUR;
     static readonly IHardwareInfo hardwareInfo = new HardwareInfo();
@@ -14,7 +12,7 @@ static class PCM_Backend
     {
         DateTime lastLog = DateTime.Now;
         int dataPointCount = 0;
-        float[] data = new float[DATA_PER_HOUR];
+        float[] data = new float[DATA_PER_WRITE];
 
         while (true)
         {
@@ -27,22 +25,32 @@ static class PCM_Backend
                 lastLog = DateTime.Now;
                 dataPointCount++;
 
-                if (dataPointCount >= DATA_PER_HOUR)
+                if (dataPointCount < DATA_PER_WRITE)
                 {
-
-                    int fileCount = Directory.GetFiles("../data/", "*.pcmd", SearchOption.TopDirectoryOnly).Length;
-
-                    FileStream fstream = File.Open("../data/h" + fileCount.ToString() + ".pcmd", FileMode.Create);
-                    BinaryWriter writer = new BinaryWriter(fstream, Encoding.UTF8, false);
-
-                    for (int i = 0; i < DATA_PER_HOUR; i++)
-                    {
-                        writer.Write(data[i]);
-                    }
-
-                    writer.Close();
-                    dataPointCount = 0;
+                    continue;
                 }
+
+
+                FileStream fstream;
+                try
+                {
+                    fstream = File.Open("../data/data.pcmd", FileMode.Append);
+                }
+                catch
+                {
+                    fstream = File.Open("../data/data.pcmd", FileMode.Create);
+                }
+
+                BinaryWriter writer = new BinaryWriter(fstream, Encoding.UTF8, false);
+
+                for (int i = 0; i < DATA_PER_WRITE; i++)
+                {
+                    writer.Write(data[i]);
+                }
+
+                writer.Close();
+                dataPointCount = 0;
+                Console.WriteLine("File written to disk!");
             } 
         }
     }

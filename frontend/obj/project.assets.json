@@ -2,6 +2,9 @@
   "version": 3,
   "targets": {
     "net7.0": {
+      "raylib/4.5.0": {
+        "type": "package"
+      },
       "Raylib-cs/4.5.0": {
         "type": "package",
         "dependencies": {
@@ -52,6 +55,69 @@
     }
   },
   "libraries": {
+    "raylib/4.5.0": {
+      "sha512": "pRx9hc8KSy9uWrwpYPe47oYNxHsi95NwF9gdJV4xEMbqIJP2MrjDj8CM8k2e8PiU0syQ0FfeIp76h6f8dNxi5A==",
+      "type": "package",
+      "path": "raylib/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/native/LICENSE",
+        "build/native/README.md",
+        "build/native/include/AudioDevice.hpp",
+        "build/native/include/AudioStream.hpp",
+        "build/native/include/BoundingBox.hpp",
+        "build/native/include/Camera2D.hpp",
+        "build/native/include/Camera3D.hpp",
+        "build/native/include/Color.hpp",
+        "build/native/include/Font.hpp",
+        "build/native/include/Functions.hpp",
+        "build/native/include/Gamepad.hpp",
+        "build/native/include/Image.hpp",
+        "build/native/include/Material.hpp",
+        "build/native/include/Matrix.hpp",
+        "build/native/include/Mesh.hpp",
+        "build/native/include/Model.hpp",
+        "build/native/include/ModelAnimation.hpp",
+        "build/native/include/Mouse.hpp",
+        "build/native/include/Music.hpp",
+        "build/native/include/Ray.hpp",
+        "build/native/include/RayCollision.hpp",
+        "build/native/include/RaylibException.hpp",
+        "build/native/include/Rectangle.hpp",
+        "build/native/include/RenderTexture.hpp",
+        "build/native/include/Shader.hpp",
+        "build/native/include/Sound.hpp",
+        "build/native/include/Text.hpp",
+        "build/native/include/Texture.hpp",
+        "build/native/include/TextureUnmanaged.hpp",
+        "build/native/include/Touch.hpp",
+        "build/native/include/Vector2.hpp",
+        "build/native/include/Vector3.hpp",
+        "build/native/include/Vector4.hpp",
+        "build/native/include/VrStereoConfig.hpp",
+        "build/native/include/Wave.hpp",
+        "build/native/include/Window.hpp",
+        "build/native/include/raylib-cpp-utils.hpp",
+        "build/native/include/raylib-cpp.hpp",
+        "build/native/include/raylib.h",
+        "build/native/include/raylib.hpp",
+        "build/native/include/raymath.h",
+        "build/native/include/raymath.hpp",
+        "build/native/include/rlgl.h",
+        "build/native/lib/win32/raylib.dll",
+        "build/native/lib/win32/raylib.lib",
+        "build/native/lib/win32/raylibdll.lib",
+        "build/native/lib/x64/raylib.dll",
+        "build/native/lib/x64/raylib.lib",
+        "build/native/lib/x64/raylibdll.lib",
+        "build/native/raylib.targets",
+        "build/native/raylibUI.xml",
+        "build/native/raylib_128x128.png",
+        "raylib.4.5.0.nupkg.sha512",
+        "raylib.nuspec"
+      ]
+    },
     "Raylib-cs/4.5.0": {
       "sha512": "VBM71a+X7v1GiobKRmKUKpgB5XLn1ZD+pJT0MuPsgEO2wfJehvPDWLrfrc65rvI3WuwSbs9Jikv5jOglhRLXug==",
       "type": "package",
@@ -124,39 +190,29 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Raylib-cs >= 4.5.0"
+      "Raylib-cs >= 4.5.0",
+      "raylib >= 4.5.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sodet\\.nuget\\packages\\": {},
-    "C:\\Users\\sodet\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/home/user/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sodet\\Documents\\GitHub\\PC-Metrics\\frontend\\PC-Metrics.csproj",
+      "projectUniqueName": "/media/sf_archbox_shared/GitHub/PC-Metrics/frontend/PC-Metrics.csproj",
       "projectName": "PC-Metrics",
-      "projectPath": "C:\\Users\\sodet\\Documents\\GitHub\\PC-Metrics\\frontend\\PC-Metrics.csproj",
-      "packagesPath": "C:\\Users\\sodet\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sodet\\Documents\\GitHub\\PC-Metrics\\frontend\\obj\\",
+      "projectPath": "/media/sf_archbox_shared/GitHub/PC-Metrics/frontend/PC-Metrics.csproj",
+      "packagesPath": "/home/user/.nuget/packages/",
+      "outputPath": "/media/sf_archbox_shared/GitHub/PC-Metrics/frontend/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Users\\sodet\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\sodet\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Users\\sodet\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/user/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Users\\sodet\\AppData\\Roaming\\Cosmos User Kit\\packages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -178,6 +234,10 @@
           "Raylib-cs": {
             "target": "Package",
             "version": "[4.5.0, )"
+          },
+          "raylib": {
+            "target": "Package",
+            "version": "[4.5.0, )"
           }
         },
         "imports": [
@@ -191,12 +251,18 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.3, 7.0.3]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.103/RuntimeIdentifierGraph.json"
       }
     }
   }

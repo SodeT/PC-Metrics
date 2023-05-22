@@ -1,15 +1,12 @@
-﻿
-using Raylib_cs;
-using System;
+﻿using Raylib_cs;
 using System.Numerics;
-using System.Collections;
-using System.IO;
 using System.Text;
 
 
 static class PCM_Frontend
 {
-    const int DATA_PER_HOUR = 60;
+    const int DATA_PER_FILE = 10;
+    const int DATA_PER_HOUR = 600;
     const int WIDTH = 1600;
     const int HEIGHT = 900;
     const int BLOCK_WIDTH = 1;
@@ -110,33 +107,44 @@ static class PCM_Frontend
 
     public static float[] LoadData()
     {
-        int fileCount = Directory.GetFiles("../data/", "*.pcmd", SearchOption.TopDirectoryOnly).Length;
-        float[] data = new float[fileCount * DATA_PER_HOUR];
-        for (int i = 0; i < fileCount; i++)
+        string[] files = Directory.GetFiles("../data/", "*.pcmd", SearchOption.TopDirectoryOnly);
+
+        if (files.Length == 0)
         {
-            ReadDataFile(i).CopyTo(data, i * DATA_PER_HOUR);
+            float[] zeroData = new float[DATA_PER_FILE];
+            for (int i = 0; i < DATA_PER_FILE; i++)
+            {
+                zeroData[i] = 0.0f;
+            }
+            return zeroData;
         }
 
-     
-        return data;
-    }
 
-    public static float[] ReadDataFile(int index)
-    {
-        float[] ret = new float[DATA_PER_HOUR];
-        string path = "../data/h" + index.ToString() + ".pcmd";
+        string fileName;
+        if (files.Contains("data.pcmd"))
+        {
+            fileName = "data.pcmd";
+        }
+        else 
+        {
+            fileName = files[0];
+        }
 
-        FileStream fstream = File.Open(path, FileMode.Open);
+        int readLength = (int)new System.IO.FileInfo(fileName).Length / sizeof(float);
+        float[] data = new float[readLength];
+
+        FileStream fstream = File.Open(fileName, FileMode.Open);
         BinaryReader reader = new BinaryReader(fstream, Encoding.UTF8, false);
-        
-        for (int i = 0; i < DATA_PER_HOUR; i++)
+
+        for (int i = 0; i < readLength; i++)
         { 
-            ret[i] = reader.ReadSingle();
-        } 
-        
+            data[i] = reader.ReadSingle();
+        }
+
         reader.Close();
 
-        return ret;
+
+        return data;
     }
 
     public static Button ButtonClicked(Button[] btns, Vector2 mousePos)
@@ -174,7 +182,8 @@ static class PCM_Frontend
         {
             Raylib.DrawLine(0, yFraction * y, WIDTH, yFraction * y, gridColor);
             string percText = (100 - (float)y / lines * 100).ToString() + "%";
-            Raylib.DrawText(percText, 5, yFraction * y, 20, textColor);
+            if (y != 0)
+                Raylib.DrawText(percText, 5, yFraction * y, 20, textColor);
         }
 
         int xFraction = WIDTH / lines;
