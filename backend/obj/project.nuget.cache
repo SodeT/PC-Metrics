@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jWM8ymUlfO+5u+EKyRACwKaQJP4yVI372mUrOysX280B9Ym5f9yn52Y/ijWnLT+IWbehSm2fvwwDWdgqFQptoA==",
+  "dgSpecHash": "mPGDZLtVDOZ8PDYlKOJBduMLrtpmePuIa8DKPJkkvFWPkxLkQCbdmngYL3dK6D5tUAgDz/JNqdIB3gUTgscotw==",
   "success": true,
-  "projectFilePath": "/media/sf_archbox_shared/GitHub/PC-Metrics/backend/backend.csproj",
+  "projectFilePath": "/media/sf_archbox_shared/Github/PC-Metrics/backend/backend.csproj",
   "expectedPackageFiles": [
     "/home/user/.nuget/packages/computerinfo/0.2.0-prerelease/computerinfo.0.2.0-prerelease.nupkg.sha512",
     "/home/user/.nuget/packages/hardware.info/11.0.1/hardware.info.11.0.1.nupkg.sha512",

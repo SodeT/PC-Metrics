@@ -16,42 +16,44 @@ static class PCM_Backend
 
         while (true)
         {
-            if (lastLog.AddSeconds(TIME_BETWEEN_DATA) < DateTime.Now)
+            if (lastLog.AddSeconds(TIME_BETWEEN_DATA) > DateTime.Now)
             {
-                hardwareInfo.RefreshMemoryStatus();
-                float memUsage = hardwareInfo.MemoryStatus.AvailablePhysical / (float)hardwareInfo.MemoryStatus.TotalPhysical;
-                data[dataPointCount] = 1 - memUsage;
+                continue;
+            }
 
-                lastLog = DateTime.Now;
-                dataPointCount++;
+            hardwareInfo.RefreshMemoryStatus();
+            float memUsage = hardwareInfo.MemoryStatus.AvailablePhysical / (float)hardwareInfo.MemoryStatus.TotalPhysical;
+            data[dataPointCount] = 1 - memUsage;
 
-                if (dataPointCount < DATA_PER_WRITE)
-                {
-                    continue;
-                }
+            lastLog = DateTime.Now;
+            dataPointCount++;
+
+            if (dataPointCount < DATA_PER_WRITE)
+            {
+                continue;
+            }
 
 
-                FileStream fstream;
-                try
-                {
-                    fstream = File.Open("../data/data.pcmd", FileMode.Append);
-                }
-                catch
-                {
-                    fstream = File.Open("../data/data.pcmd", FileMode.Create);
-                }
+            FileStream fstream;
+            try
+            {
+                fstream = File.Open("../data/data.pcmd", FileMode.Append);
+            }
+            catch
+            {
+                fstream = File.Open("../data/data.pcmd", FileMode.Create);
+            }
 
-                BinaryWriter writer = new BinaryWriter(fstream, Encoding.UTF8, false);
+            BinaryWriter writer = new BinaryWriter(fstream, Encoding.UTF8, false);
 
-                for (int i = 0; i < DATA_PER_WRITE; i++)
-                {
-                    writer.Write(data[i]);
-                }
+            for (int i = 0; i < DATA_PER_WRITE; i++)
+            {
+                writer.Write(data[i]);
+            }
 
-                writer.Close();
-                dataPointCount = 0;
-                Console.WriteLine("File written to disk!");
-            } 
+            writer.Close();
+            dataPointCount = 0;
+            Console.WriteLine("File written to disk!"); 
         }
     }
 }

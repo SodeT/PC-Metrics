@@ -200,11 +200,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/media/sf_archbox_shared/GitHub/PC-Metrics/frontend/PC-Metrics.csproj",
+      "projectUniqueName": "/media/sf_archbox_shared/Github/PC-Metrics/frontend/PC-Metrics.csproj",
       "projectName": "PC-Metrics",
-      "projectPath": "/media/sf_archbox_shared/GitHub/PC-Metrics/frontend/PC-Metrics.csproj",
+      "projectPath": "/media/sf_archbox_shared/Github/PC-Metrics/frontend/PC-Metrics.csproj",
       "packagesPath": "/home/user/.nuget/packages/",
-      "outputPath": "/media/sf_archbox_shared/GitHub/PC-Metrics/frontend/obj/",
+      "outputPath": "/media/sf_archbox_shared/Github/PC-Metrics/frontend/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/user/.nuget/NuGet/NuGet.Config"

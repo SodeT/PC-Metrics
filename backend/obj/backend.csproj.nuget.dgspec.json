@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/media/sf_archbox_shared/GitHub/PC-Metrics/backend/backend.csproj": {}
+    "/media/sf_archbox_shared/Github/PC-Metrics/backend/backend.csproj": {}
   },
   "projects": {
-    "/media/sf_archbox_shared/GitHub/PC-Metrics/backend/backend.csproj": {
+    "/media/sf_archbox_shared/Github/PC-Metrics/backend/backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/media/sf_archbox_shared/GitHub/PC-Metrics/backend/backend.csproj",
+        "projectUniqueName": "/media/sf_archbox_shared/Github/PC-Metrics/backend/backend.csproj",
         "projectName": "backend",
-        "projectPath": "/media/sf_archbox_shared/GitHub/PC-Metrics/backend/backend.csproj",
+        "projectPath": "/media/sf_archbox_shared/Github/PC-Metrics/backend/backend.csproj",
         "packagesPath": "/home/user/.nuget/packages/",
-        "outputPath": "/media/sf_archbox_shared/GitHub/PC-Metrics/backend/obj/",
+        "outputPath": "/media/sf_archbox_shared/Github/PC-Metrics/backend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/user/.nuget/NuGet/NuGet.Config"
